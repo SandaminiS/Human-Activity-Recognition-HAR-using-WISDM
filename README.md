@@ -1,0 +1,100 @@
+# Human Activity Recognition (HAR) using WISDM: Deep Learning Approaches
+
+## Overview
+This project, completed for **CAP 5610: Machine Learning**, focuses on **Human Activity Recognition (HAR)** using the **WISDM** wearable/smartphone sensor dataset. We classify **18 daily activities** from accelerometer/gyroscope signals collected from smartphones and smartwatches, and compare multiple deep learning architectures.
+
+---
+
+## Group Members (Group 15)
+- **Thiwanka Dissanayaka (Coordinator)** — sahan@ucf.edu  
+- **Shahd Alnofaie** — sh467442@ucf.edu  
+- **Chathura Keshan** — chathura.keshan@ucf.edu  
+- **Sandamini Senaratne** — lo602443@ucf.edu  
+- **Zack Willis** — john.willis@ucf.edu  
+
+---
+
+## Objectives
+- Build a multi-class classifier to recognize **18 human activities** from wearable sensor signals.
+- Evaluate and compare deep learning models for sequential/sensor data:
+  - **MLP, CNN, RNN, BiLSTM, TCN**
+- Analyze misclassifications and identify challenges (e.g., overlapping activities such as *eating soup* vs *eating pasta*).
+
+---
+
+## Dataset
+- **Dataset:** WISDM (Fordham University)
+- **Participants:** 51
+- **Activities:** 18
+- **Duration per activity:** 3 minutes
+- **Sampling rate:** 20 Hz (every 50 ms)
+- **Sensors:** Smartphone + Smartwatch (accelerometer + gyroscope)
+- **Scale:** 15,630,426 raw measurements (with activity labels)
+
+### Activity Classes (18)
+Walking, Jogging, Stairs, Sitting, Standing, Typing, Brushing Teeth, Eating Soup, Eating Chips, Eating Pasta, Drinking from Cup, Eating Sandwich, Kicking (Soccer Ball), Playing Catch (Tennis Ball), Dribbling (Basketball), Writing, Clapping, Folding Clothes.
+
+---
+
+## Data Description / Representation
+- Each activity is recorded at ~20 Hz for 3 minutes → **3,600 samples per axis (x, y, z)** per sensor.
+- For implementation, data was structured into sequences with **19,800 features per sample**.
+
+---
+
+## Methodology
+
+### Models Implemented
+- **Multilayer Perceptron (MLP)**
+- **Convolutional Neural Network (CNN)**
+- **Recurrent Neural Network (RNN)**
+- **Bidirectional LSTM (BiLSTM)**
+- **Temporal Convolutional Network (TCN)**
+
+### Hyperparameter Tuning
+Hyperparameters were tuned using a systematic search (grid search with cross-validation), exploring:
+- learning rate, dropout, kernel size, dilation factors, number of filters/hidden units, etc.
+
+---
+
+## Evaluation Metrics
+- Accuracy  
+- Precision  
+- Recall  
+- F1-score  
+
+---
+
+## Results (Overall)
+| Model  | Precision | Recall | F1-score | Accuracy |
+|--------|-----------|--------|----------|----------|
+| MLP    | 0.45      | 0.44   | 0.44     | 0.4443   |
+| CNN    | 0.67      | 0.64   | 0.65     | 0.6432   |
+| RNN    | 0.45      | 0.47   | 0.46     | 0.4703   |
+| BiLSTM | 0.64      | 0.63   | 0.64     | 0.6327   |
+| TCN    | 0.67      | 0.64   | 0.65     | **0.6440** |
+
+**Best-performing models:** **TCN** (highest accuracy) and **BiLSTM** (strong overall performance).  
+A key challenge was confusion between activities with similar motion patterns (e.g., eating-related classes).
+
+---
+
+## Contributions
+- **Thiwanka Dissanayaka:** TCN implementation, code aggregation/structuring, project lead  
+- **Shahd Alnofaie:** CNN implementation, presentation preparation  
+- **Chathura Keshan:** BiLSTM implementation, report writing  
+- **Sandamini Senaratne:** MLP implementation, report writing  
+- **Zack Willis:** RNN implementation, presentation preparation  
+
+---
+
+## How to Use (optional — update once code is added)
+```bash
+# 1) Create environment and install deps
+pip install -r requirements.txt
+
+# 2) Train a model (example)
+python src/train.py --model tcn
+
+# 3) Evaluate (example)
+python src/evaluate.py --model tcn
