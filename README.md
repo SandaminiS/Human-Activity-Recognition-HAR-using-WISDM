@@ -63,24 +63,4 @@ Hyperparameters were tuned using a systematic search (grid search with cross-val
 - Recall  
 - F1-score  
 
----
 
-## Contributions
-- **Thiwanka Dissanayaka:** TCN implementation, code aggregation/structuring, project lead  
-- **Shahd Alnofaie:** CNN implementation, presentation preparation  
-- **Chathura Keshan:** BiLSTM implementation, report writing  
-- **Sandamini Senaratne:** MLP implementation, report writing  
-- **Zack Willis:** RNN implementation, presentation preparation  
-
----
-
-## How to Use (optional — update once code is added)
-```bash
-# 1) Create environment and install deps
-pip install -r requirements.txt
-
-# 2) Train a model (example)
-python src/train.py --model tcn
-
-# 3) Evaluate (example)
-python src/evaluate.py --model tcn
