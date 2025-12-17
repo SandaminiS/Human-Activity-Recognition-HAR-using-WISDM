@@ -6,11 +6,11 @@ This project, completed for **CAP 5610: Machine Learning**, focuses on **Human A
 ---
 
 ## Group Members (Group 15)
-- **Thiwanka Dissanayaka (Coordinator)** — sahan@ucf.edu  
-- **Shahd Alnofaie** — sh467442@ucf.edu  
-- **Chathura Keshan** — chathura.keshan@ucf.edu  
-- **Sandamini Senaratne** — lo602443@ucf.edu  
-- **Zack Willis** — john.willis@ucf.edu  
+- **Thiwanka Dissanayaka (Coordinator)** 
+- **Shahd Alnofaie**  
+- **Chathura Keshan** 
+- **Sandamini Senaratne**  
+- **Zack Willis**   
 
 ---
 
