@@ -65,20 +65,6 @@ Hyperparameters were tuned using a systematic search (grid search with cross-val
 
 ---
 
-## Results (Overall)
-| Model  | Precision | Recall | F1-score | Accuracy |
-|--------|-----------|--------|----------|----------|
-| MLP    | 0.45      | 0.44   | 0.44     | 0.4443   |
-| CNN    | 0.67      | 0.64   | 0.65     | 0.6432   |
-| RNN    | 0.45      | 0.47   | 0.46     | 0.4703   |
-| BiLSTM | 0.64      | 0.63   | 0.64     | 0.6327   |
-| TCN    | 0.67      | 0.64   | 0.65     | **0.6440** |
-
-**Best-performing models:** **TCN** (highest accuracy) and **BiLSTM** (strong overall performance).  
-A key challenge was confusion between activities with similar motion patterns (e.g., eating-related classes).
-
----
-
 ## Contributions
 - **Thiwanka Dissanayaka:** TCN implementation, code aggregation/structuring, project lead  
 - **Shahd Alnofaie:** CNN implementation, presentation preparation  
